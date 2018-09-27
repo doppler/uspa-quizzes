@@ -9,7 +9,7 @@ const Header = ({children}) =>
 
 const Quiz = props => {
 
-  const { quiz, gradeQuiz } = props
+  const { quiz, onGradeQuiz, answers } = props
 
   return (
     <div className="Quiz">
@@ -18,6 +18,7 @@ const Quiz = props => {
         {
           quiz.questions.map(question => {
             let Element = null
+            const answer = answers[question.number]
             switch(question.type) {
               case "singleChoice":
                 Element = SingleChoiceQuestion
@@ -25,18 +26,19 @@ const Quiz = props => {
               default:
                 break
             }
-            return <Element key={question.number} question={question} {...props}/>
+            return <Element key={question.number} question={question} answer={answer} {...props}/>
           })
         }
       </div>
-      <button onClick={gradeQuiz}>Submit Quiz</button>
+      <button onClick={onGradeQuiz}>Grade Quiz</button>
     </div>
   )
 }
 
 Quiz.propTypes = {
   quiz: PropTypes.object.isRequired,
-  gradeQuiz: PropTypes.func.isRequired
+  onGradeQuiz: PropTypes.func.isRequired,
+  answers: PropTypes.object.isRequired
 }
 
 export default Quiz

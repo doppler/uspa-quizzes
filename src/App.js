@@ -9,7 +9,8 @@ class App extends Component {
     super(props)
     this.state = {
       quiz: Quizzes['Category A'],
-      answers: {}
+      answers: {},
+      grading: false
     }
     this.selectAnswer = this.selectAnswer.bind(this)
     this.gradeQuiz = this.gradeQuiz.bind(this)
@@ -33,7 +34,9 @@ class App extends Component {
   }
 
   gradeQuiz() {
-    console.log("TODO")
+    this.setState({
+      grading: true
+    })
   }
 
   render() {
@@ -41,8 +44,10 @@ class App extends Component {
       <div className="App">
         <Quiz
           quiz={this.state.quiz}
-          selectAnswer={this.selectAnswer}
-          gradeQuiz={this.gradeQuiz}
+          onSelectAnswer={this.selectAnswer}
+          onGradeQuiz={this.gradeQuiz}
+          answers={this.state.answers}
+          grading={this.state.grading}
         />
       </div>
     );

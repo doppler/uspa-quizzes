@@ -23,3 +23,9 @@
 
 .Option-text {
   padding-left: 10px; }
+
+input[type=radio] {
+  margin-right: 10px; }
+
+.Question.wrong .Question-text {
+  background-color: red; }
