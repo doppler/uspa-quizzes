@@ -10,32 +10,38 @@ class App extends Component {
     this.state = {
       quiz: Quizzes['Category A'],
       answers: {},
-      grading: false
     }
-    this.selectAnswer = this.selectAnswer.bind(this)
+    this.handleSelectAnswer = this.handleSelectAnswer.bind(this)
     this.gradeQuiz = this.gradeQuiz.bind(this)
   }
 
-  selectAnswer(question, answer) {
-    const number = question.number
+  handleSelectAnswer(question, answer) {
     const selectedAnswer = Number.parseFloat(answer, 10)
-    const correctAnswer = this.state.quiz.questions.find(question => question.number === number).correctAnswer
     this.setState({
       ...this.state,
       answers: {
         ...this.state.answers,
-        [number]: {
-          selectedAnswer,
-          correctAnswer,
-          correct: selectedAnswer === correctAnswer
+        [question.number]: {
+          selectedAnswer
         }
       }
     })
   }
 
   gradeQuiz() {
+    console.log("in gradeQuiz")
+    const answers = {}
+    this.state.quiz.questions.forEach(question => {
+      const answer = {...this.state.answers[question.number]}
+      if(answer.selectedAnswer !== undefined) {
+        const selectedAnswer = answer.selectedAnswer
+        const correct = (selectedAnswer === question.correctAnswer)
+        answers[question.number] = { selectedAnswer, correct }
+      }
+    })
     this.setState({
-      grading: true
+      ...this.state,
+      answers
     })
   }
 
@@ -44,10 +50,9 @@ class App extends Component {
       <div className="App">
         <Quiz
           quiz={this.state.quiz}
-          onSelectAnswer={this.selectAnswer}
+          onSelectAnswer={this.handleSelectAnswer}
           onGradeQuiz={this.gradeQuiz}
           answers={this.state.answers}
-          grading={this.state.grading}
         />
       </div>
     );
