@@ -9,11 +9,14 @@ const Header = ({children}) =>
 
 const Quiz = props => {
 
-  const { quiz, onGradeQuiz, answers } = props
+  const { quiz, onGradeQuiz, answers, grade } = props
 
   return (
     <div className="Quiz">
-      <Header><h1>Quiz Header</h1></Header>
+      <Header>
+        <h1>{quiz.name}</h1>
+        <span className="Grade">Grade: {grade} %</span>
+      </Header>
       <div className="Questions">
         {
           quiz.questions.map(question => {
@@ -38,7 +41,8 @@ const Quiz = props => {
 Quiz.propTypes = {
   quiz: PropTypes.object.isRequired,
   onGradeQuiz: PropTypes.func.isRequired,
-  answers: PropTypes.object.isRequired
+  answers: PropTypes.object.isRequired,
+  grade: PropTypes.number.isRequired
 }
 
 export default Quiz

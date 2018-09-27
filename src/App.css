@@ -4,7 +4,10 @@
   color: #fff;
   border-bottom: 1px solid red; }
   .Header h1 {
+    display: inline-block;
     margin: 0px; }
+  .Header .Grade {
+    float: right; }
 
 .Question {
   border: 1px solid black;

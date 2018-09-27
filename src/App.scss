@@ -4,7 +4,11 @@
   color: #fff;
   border-bottom: 1px solid red;
   h1 {
+    display: inline-block;
     margin: 0px;
+  }
+  .Grade {
+    float: right;
   }
 }
 
