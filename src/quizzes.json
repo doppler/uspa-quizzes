@@ -1,0 +1,41 @@
+{
+  "Category A": {
+    "questions": [
+      {
+        "number": 1,
+        "type": "singleChoice",
+        "text": "Describe how to avoid the propeller(s) when approaching an aircraft.",
+        "options": [
+          "From the front",
+          "Under the wing",
+          "From the rear"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "number": 2,
+        "type": "singleChoice",
+        "text": "Who is responsible for seat belt use in the aircraft?",
+        "options": [
+          "Dropzone owner",
+          "Everyone on the plane, including the pilot",
+          "Each jumper",
+          "The pilot"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "number": 3,
+        "type": "singleChoice",
+        "text": "When must seatbelts be fastened?",
+        "options": [
+          "Before takeoff",
+          "Until 1,500 feet",
+          "During taxiing, takeoff and landing",
+          "Seatbelts aren't required"
+        ],
+        "correctAnswer": 2
+      }
+    ]
+  }
+}
