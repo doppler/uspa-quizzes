@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SingleChoiceQuestion = ({question}) => {
+const SingleChoiceQuestion = ({question, selectAnswer}) => {
   return (
     <div className="Question SingleChoiceQuestion">
       <div className="Question-text">
@@ -16,7 +16,9 @@ const SingleChoiceQuestion = ({question}) => {
                 <input
                   type="radio"
                   name={`question-${question.number}`}
-                  value={index}/>
+                  value={index}
+                  onChange={(e) => selectAnswer(question, e.target.value)}
+                />
                 <span className="Option-text">{option}</span>
               </div>
             )
@@ -28,7 +30,8 @@ const SingleChoiceQuestion = ({question}) => {
 }
 
 SingleChoiceQuestion.propTypes = {
-  question: PropTypes.object.isRequired
+  question: PropTypes.object.isRequired,
+  selectAnswer: PropTypes.func.isRequired // probably gonna get rid of this
 }
 
 export default SingleChoiceQuestion

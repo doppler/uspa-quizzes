@@ -7,7 +7,10 @@ const Header = ({children}) =>
     {children}
   </div>
 
-const Quiz = ({ quiz }) => {
+const Quiz = props => {
+
+  const { quiz, gradeQuiz } = props
+
   return (
     <div className="Quiz">
       <Header><h1>Quiz Header</h1></Header>
@@ -22,16 +25,18 @@ const Quiz = ({ quiz }) => {
               default:
                 break
             }
-            return <Element key={question.number} question={question}/>
+            return <Element key={question.number} question={question} {...props}/>
           })
         }
       </div>
+      <button onClick={gradeQuiz}>Submit Quiz</button>
     </div>
   )
 }
 
 Quiz.propTypes = {
-  quiz: PropTypes.object.isRequired
+  quiz: PropTypes.object.isRequired,
+  gradeQuiz: PropTypes.func.isRequired
 }
 
 export default Quiz
