@@ -2,6 +2,7 @@
   "name": "quiz-thing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://doppler.github.com/uspa-quizzes",
   "dependencies": {
     "node-sass-chokidar": "^1.3.3",
     "npm-run-all": "^4.1.3",
