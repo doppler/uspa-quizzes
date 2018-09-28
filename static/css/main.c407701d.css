@@ -1,0 +1,2 @@
+body{margin:0;padding:0;font-family:sans-serif}.Header{background:#00008b;padding:10px;color:#fff;border-bottom:1px solid red}.Header h1{display:inline-block;margin:0}.Header .Grade{float:right}.Question{border:1px solid #000;border-radius:5px;margin:5px}.Question-text{background-color:#ffebcd;border-bottom:1px solid #000}.Question-options,.Question-text{padding:5px 10px}.Option-group{margin-bottom:.5em}.Option-text{padding-left:10px}input[type=radio]{margin-right:10px}.Question.wrong .Question-text{background-color:red}
+/*# sourceMappingURL=main.c407701d.css.map*/
