@@ -36,6 +36,95 @@
           "Seatbelts aren't required"
         ],
         "correctAnswer": 2
+      },
+      {
+        "number": 4,
+        "type": "singleChoice",
+        "text": "From whom do you take directions in the event of an aircraft problem?",
+        "options": [
+          "My instructor",
+          "The pilot",
+          "Whoever has the most experience"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "number": 5,
+        "type": "singleChoice",
+        "text": "Why is it important to exit on \"Go!\" (or \"Arch!\")?",
+        "options": [
+          "So the pilot knows when to adjust the plane's trim",
+          "To ensure you and your instructor(s) leave at the same time and at the right place over the ground",
+          "If you stay in the door too long, the door monster will get you"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "number": 6,
+        "type": "singleChoice",
+        "text": "Where does the wind come from initially upon exit from the aircraft?",
+        "options": [
+          "The front of the plane",
+          "The ground",
+          "None of the above"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "number": 7,
+        "type": "singleChoice",
+        "text": "Why do skydivers first learn to fall stable face to earth (think in terms of the equipment)?",
+        "options": [
+          "It's the best position for deployment",
+          "You can't tell how high you are if you're back-to-earth",
+          "Sitflying is too advanced a technique for new skydivers"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "number": 8,
+        "type": "singleChoice",
+        "text": "What does a canopy do immediately following a turn?",
+        "options": [
+          "Levels out",
+          "Dives",
+          "Goes into line twists"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "number": 9,
+        "type": "singleChoice",
+        "text": "What are the landing priorities?",
+        "options": [
+          "1: Wing level 2: Clear and open area 3: Into the wind 4: PLF",
+          "1: Into the wind 2: Clear and open area 3: Flare at least half way 4: PLF",
+          "1: Wing Level 2: Flare at least half way 3: Clear and open field 4: PLF",
+          "1: Wing level 2: Clear and open area 3: Flare at least half way 4: PLF"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "number": 10,
+        "type": "singleChoice",
+        "text": "What is the purpose of the landing flare?",
+        "options": [
+          "To ensure the wing is level",
+          "To slow the canopy down before landing",
+          "To convert forward speed to lift"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "number": 11,
+        "type": "singleChoice",
+        "text": "Describe the procedure for a hard landing (parachute landing fall or PLF).",
+        "options": [
+          "Feet and knees together, hands and arms in, roll on landing",
+          "Extend legs in front with knees bent and prepare to absorb the impact",
+          "Fall to your knees, avoid hitting your head by catching yourself with your elbows/hands"
+        ],
+        "correctAnswer": 0
       }
     ]
   }
